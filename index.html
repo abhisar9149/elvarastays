@@ -1,49 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Elvara Stays</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvara Stays | Luxury Homestay Experiences</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Elvara <span>Stays</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="the-pearl.html">The Pearl</a></li>
+                <li><a href="the-cove.html">The Cove</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="the-pearl.html">The Pearl</a>
-  <a href="the-cove.html">The Cove</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <!-- Cover Photo -->
+    <section class="cover">
+        <div class="cover-content">
+            <h1>Welcome to Elvara Stays</h1>
+            <p>Where luxury meets tranquility</p>
+        </div>
+    </section>
 
-<div class="hero">
-  <div class="hero-content">
-    <h1>Elvara Stays</h1>
-    <p>Luxury & peaceful mountain homestays 🌿</p>
-    <a class="btn" href="contact.html">Book Now</a>
-  </div>
-</div>
-
-<div class="container">
-  <h2>Our Properties</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-      <h3>The Pearl</h3>
-      <p>Luxury mountain retreat</p>
-      <a class="btn" href="the-pearl.html">View</a>
+    <!-- Hero Section: Airbnb Ratings -->
+    <div class="container">
+        <div class="hero-ratings">
+            <div class="ratings-grid">
+                <div class="rating-card">
+                    <div class="rating-number">4.98</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-label">Overall Rating</div>
+                </div>
+                <div class="rating-card">
+                    <div class="rating-number">500+</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="rating-label">Happy Guests</div>
+                </div>
+                <div class="rating-card">
+                    <div class="rating-number">Superhost</div>
+                    <div class="badge-icon">
+                        <i class="fas fa-medal"></i> 4+ Years
+                    </div>
+                    <div class="rating-label">Airbnb Superhost</div>
+                </div>
+                <div class="rating-card">
+                    <div class="rating-number">Top 1%</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="rating-label">Most Wishlisted</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-      <h3>The Cove</h3>
-      <p>Riverside peaceful stay</p>
-      <a class="btn" href="the-cove.html">View</a>
-    </div>
+    <!-- Properties Section -->
+    <section class="properties-section">
+        <div class="container">
+            <h2 class="section-title">Our Signature Stays</h2>
+            <p class="section-sub">Discover two unique experiences crafted for unforgettable moments</p>
+            <div class="properties-grid">
+                <!-- The Pearl Card -->
+                <div class="property-card">
+                    <div class="property-img pearl-img"></div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Pearl</h3>
+                        <p class="property-desc">An elegant coastal retreat with ocean views, private pool, and serene gardens. Perfect for romantic getaways or peaceful solitude.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-swimmer"></i> Pool</span>
+                        </div>
+                        <a href="the-pearl.html" class="btn">Discover The Pearl →</a>
+                    </div>
+                </div>
+                <!-- The Cove Card -->
+                <div class="property-card">
+                    <div class="property-img cove-img"></div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Cove</h3>
+                        <p class="property-desc">A hidden gem nestled among cliffs, featuring a private beach access, outdoor fire pit, and breathtaking sunset views.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-fire"></i> Fire Pit</span>
+                        </div>
+                        <a href="the-cove.html" class="btn">Discover The Cove →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Elvara Stays</h4>
+                    <p>Luxury homestay experiences<br>crafted with warmth & elegance.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a><br>
+                    <a href="the-pearl.html">The Pearl</a><br>
+                    <a href="the-cove.html">The Cove</a><br>
+                    <a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coastal Highway, Serenity Bay<br>
+                    <i class="fas fa-phone"></i> +1 (555) 789-0123<br>
+                    <i class="fas fa-envelope"></i> hello@elvarastays.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-airbnb"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Elvara Stays. All rights reserved. | Images for illustration purposes</p>
+            </div>
+        </div>
+    </footer>
 
-<footer>© 2026 Elvara Stays</footer>
-
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
