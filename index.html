@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homestay</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background: #2e8b57;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #ddd;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elvara Stays</title>
+  <style>
+    body { margin:0; font-family:Arial; background:#f6f6f6; }
+
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      text-align:center;
+    }
+
+    .hero h1 { font-size:48px; margin:0; }
+    .hero p { font-size:18px; }
+
+    .section { padding:40px; text-align:center; }
+
+    .card {
+      background:white;
+      margin:10px;
+      padding:20px;
+      display:inline-block;
+      width:250px;
+      border-radius:10px;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:12px 20px;
+      background:green;
+      color:white;
+      border-radius:8px;
+      text-decoration:none;
+      margin-top:10px;
+    }
+
+    footer { padding:20px; text-align:center; background:#222; color:white; }
+  </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Welcome to My Homestay</h1>
-    <p>Peaceful stay in the mountains 🌄</p>
-</header>
+<div class="hero">
+  <div>
+    <h1>Elvara Stays</h1>
+    <p>Peaceful mountain homestay experience 🏔️</p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Book on WhatsApp</a>
+  </div>
+</div>
 
-<section>
-    <div class="card">
-        <h2>About Us</h2>
-        <p>Enjoy a cozy stay with beautiful views, home-cooked meals, and nature.</p>
-    </div>
+<div class="section">
+  <h2>Our Rooms</h2>
 
-    <div class="card">
-        <h2>Rooms</h2>
-        <p>Comfortable rooms with all basic amenities.</p>
-    </div>
+  <div class="card">
+    <h3>Standard Room</h3>
+    <p>₹1200/night</p>
+  </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Phone: 1234567890</p>
-        <p>Email: your@email.com</p>
-    </div>
-</section>
+  <div class="card">
+    <h3>Deluxe Room</h3>
+    <p>₹2000/night</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Location</h2>
+  <p>Add your Google Maps embed here</p>
+</div>
 
 <footer>
-    <p>© 2026 My Homestay</p>
+  © 2026 Elvara Stays
 </footer>
 
+</body>
+</html>
 </body>
 </html>
