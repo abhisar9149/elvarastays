@@ -1,27 +1,111 @@
+/* =========================
+   EARTHY COLOR PALETTE
+========================= */
+:root {
+  --primary: #2f5d50;      /* forest green */
+  --secondary: #a67c52;    /* earthy brown */
+  --background: #f4efe6;   /* warm sand */
+  --card: #ffffff;         /* clean white */
+  --text: #2b2b2b;         /* soft black */
+  --muted: #6b6b6b;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
 
+/* =========================
+   NAVBAR
+========================= */
 nav {
-  background: #111;
+  background: var(--primary);
   padding: 15px;
   display: flex;
   justify-content: center;
   gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  color: #4caf50;
+  color: #d9c3a3;
 }
 
+/* =========================
+   MAIN CONTENT WRAPPER
+========================= */
 .container {
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+p {
+  color: var(--muted);
+}
+
+/* =========================
+   CARDS (for later use)
+========================= */
+.card {
+  background: var(--card);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  display: inline-block;
+  width: 260px;
+  vertical-align: top;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8d6642;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  margin-top: 50px;
 }
