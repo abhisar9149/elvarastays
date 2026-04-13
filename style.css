@@ -1,54 +1,64 @@
-/* =========================
-   EARTHY COLOR PALETTE
-========================= */
 :root {
-  --primary: #2f5d50;      /* forest green */
-  --secondary: #a67c52;    /* earthy brown */
-  --background: #f4efe6;   /* warm sand */
-  --card: #ffffff;         /* clean white */
-  --text: #2b2b2b;         /* soft black */
-  --muted: #6b6b6b;
+  --primary: #2f5d50;
+  --secondary: #a67c52;
+  --background: #f4efe6;
+  --text: #2b2b2b;
+  --card: #ffffff;
 }
 
-/* =========================
-   GLOBAL STYLES
-========================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--background);
   color: var(--text);
-  line-height: 1.6;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAV */
 nav {
   background: var(--primary);
-  padding: 15px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
+  padding: 15px;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
 }
 
-nav a:hover {
-  color: #d9c3a3;
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-/* =========================
-   MAIN CONTENT WRAPPER
-========================= */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+/* SECTIONS */
 .container {
   padding: 60px 20px;
   text-align: center;
@@ -56,56 +66,30 @@ nav a:hover {
   margin: auto;
 }
 
-/* =========================
-   HEADINGS
-========================= */
-h1, h2, h3 {
-  color: var(--primary);
-}
-
-p {
-  color: var(--muted);
-}
-
-/* =========================
-   CARDS (for later use)
-========================= */
 .card {
   background: var(--card);
   padding: 20px;
   margin: 15px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   display: inline-block;
   width: 260px;
-  vertical-align: top;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   BUTTONS
-========================= */
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 18px;
   background: var(--secondary);
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  margin-top: 10px;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #8d6642;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
   background: var(--primary);
   color: white;
-  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
