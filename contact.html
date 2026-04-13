@@ -1,28 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Elvara Stays</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Elvara <span>Stays</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="the-pearl.html">The Pearl</a></li>
+                <li><a href="the-cove.html">The Cove</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="the-pearl.html">The Pearl</a>
-  <a href="the-cove.html">The Cove</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <section class="page-header">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
+    </section>
 
-<div class="container">
-  <h2>Contact Us</h2>
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Connect With Us</h2>
+                <p>Have questions about bookings, availability, or special requests? Reach out anytime — we're here to help make your stay perfect.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            123 Coastal Highway, Serenity Bay, CA 90210
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +1 (555) 789-0123
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            hello@elvarastays.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-airbnb"></i>
+                        <div>
+                            <strong>Airbnb</strong><br>
+                            airbnb.com/h/elvarastays
+                        </div>
+                    </div>
+                </div>
 
-  <p>📞 +91-XXXXXXXXXX</p>
-  <p>📧 your@email.com</p>
+                <div class="business-hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9AM - 7PM<br>
+                    Saturday: 10AM - 5PM<br>
+                    Sunday: Closed (Emergencies only)</p>
+                </div>
+            </div>
 
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp Bookings</a>
-</div>
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option>I'm interested in...</option>
+                            <option>The Pearl</option>
+                            <option>The Cove</option>
+                            <option>General Inquiry</option>
+                            <option>Booking Question</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block">Send Message →</button>
+                    <p class="form-note">We'll get back to you within 24 hours.</p>
+                </form>
+            </div>
+        </div>
 
-<footer>© 2026 Elvara Stays</footer>
+        <!-- Map placeholder -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb2e4c7%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1644262072327!5m2!1sen!2sus" width="100%" height="350" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Elvara Stays</h4>
+                    <p>Luxury homestay experiences<br>crafted with warmth & elegance.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a><br>
+                    <a href="the-pearl.html">The Pearl</a><br>
+                    <a href="the-cove.html">The Cove</a><br>
+                    <a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coastal Highway, Serenity Bay<br>
+                    <i class="fas fa-phone"></i> +1 (555) 789-0123<br>
+                    <i class="fas fa-envelope"></i> hello@elvarastays.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-airbnb"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Elvara Stays. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
