@@ -1,20 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css">
+  <!-- BASIC META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TITLE -->
+  <title>Elvara Stays | Homestay</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1>Hi, I'm Learning Web Dev 🚀</h1>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-left">
+        <img 
+          src="https://img.freepik.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" 
+          class="logo" 
+          alt="Elvara Stays logo"
+        >
+        <h1 class="logo-text">Elvara Stays</h1>
+      </div>
 
-    <p>This is my first website built step by step.</p>
+      <nav class="header-nav">
+        <a href="#">📞 +91 8859953651</a>
+        <a href="#">Home</a>
+        <a href="#">Properties</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <button onclick="changeText()">Click Me</button>
+  <!-- MAIN -->
+  <main>
 
-    <p id="message">This text will change.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <img 
+        src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/01a928a3-e656-45ab-b618-2db945c0ca6a.jpeg?im_w=1200" 
+        class="hero-img" 
+        alt="Beautiful homestay view"
+      >
 
-    <script src="script.js"></script>
+      <div class="hero-text">
+        <h2>Quiet, comfortable stays.</h2>
+      </div>
+    </section>
+
+    <!-- PROPERTIES -->
+    <section class="properties">
+      <div class="container">
+        <h2>Our Properties</h2>
+        <div class="properties-grid">
+          <div class="property-card">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/ea883d0b-60bd-433a-9faf-4dbf57f3d005.jpeg?im_w=720" alt="The Pearl">
+            <h3>The Pearl by Elvara Stays</h3>
+            <p>Great awesome property. Visit this property.
+          </div>
+          <div class="property-card">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1403594766964800043/original/43abbade-cfe5-452c-8cc7-24d7ec4819ce.jpeg?im_w=1200" alt="The Pearl">
+            <h3>The Cove by Elvara Stays</h3>
+            <p>Great awesome property. Visit this property.
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Elvara Stays. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>
