@@ -52,7 +52,7 @@ img {
 ========================= */
 .header {
   background: linear-gradient(to right, #1f1f1f, #3a3a3a);
-  padding: 15px 0;
+  padding: 15px 15px;
   border-bottom: 1px solid #eee;
 }
 
