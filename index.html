@@ -1,100 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- BASIC META -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- TITLE -->
   <title>Elvara Stays | Homestay</title>
 
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-container">
-      <div class="header-left">
-        <img 
-          src="logo.png" 
-          class="logo" 
-          alt="Elvara Stays logo"
-        >
-        <h1 class="logo-text">Elvara Stays</h1>
-      </div>
-
-      <nav class="header-nav">
-        <a href="#">📞 +91 8859953651</a>
-        <a href="#">Home</a>
-        <a href="#">Properties</a>
-        <a href="#">Contact</a>
-      </nav>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-container">
+    <div class="header-left">
+      <img src="images/logo.png" class="logo" alt="Elvara Stays logo">
+      <h1 class="logo-text">Elvara Stays</h1>
     </div>
-  </header>
 
-  <!-- MAIN -->
-  <main>
+    <nav class="header-nav">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+918859953651" class="call-btn">📞 Call</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img 
-        src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/01a928a3-e656-45ab-b618-2db945c0ca6a.jpeg?im_w=1200" 
-        class="hero-img" 
-        alt="Beautiful homestay view"
-      >
+<!-- HERO -->
+<section id="home" class="hero">
+  <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/01a928a3-e656-45ab-b618-2db945c0ca6a.jpeg?im_w=1200" class="hero-img">
 
-      <div class="hero-text">
-        <h2>Quiet, comfortable stays.</h2>
+  <div class="hero-text">
+    <h2>Quiet. Comfortable. Memorable stays.</h2>
+    <p>Experience premium homestays in nature.</p>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="properties" class="properties">
+  <div class="container">
+    <h2>Our Properties</h2>
+
+    <div class="properties-grid">
+
+      <div class="property-card" data-id="pearl">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/ea883d0b-60bd-433a-9faf-4dbf57f3d005.jpeg?im_w=720">
+        <h3>The Pearl</h3>
+        <p>A peaceful, premium stay surrounded by nature.</p>
+        <button class="book-btn">View Details</button>
       </div>
-    </section>
 
-    <!-- PROPERTIES -->
-    <section class="properties">
-      <div class="container">
-        <h2>Our Properties</h2>
-        <div class="properties-grid">
-          <div class="property-card">
-            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/ea883d0b-60bd-433a-9faf-4dbf57f3d005.jpeg?im_w=720" alt="The Pearl">
-            <h3>The Pearl by Elvara Stays</h3>
-            <p>Great awesome property. Visit this property.
-          </div>
-          <div class="property-card">
-            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1403594766964800043/original/43abbade-cfe5-452c-8cc7-24d7ec4819ce.jpeg?im_w=1200" alt="The Pearl">
-            <h3>The Cove by Elvara Stays</h3>
-            <p>Great awesome property. Visit this property.
-          </div>
-        </div>
-
-        
+      <div class="property-card" data-id="cove">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1403594766964800043/original/43abbade-cfe5-452c-8cc7-24d7ec4819ce.jpeg?im_w=1200">
+        <h3>The Cove</h3>
+        <p>A cozy getaway designed for relaxation.</p>
+        <button class="book-btn">View Details</button>
       </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section class="contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Elvara Stays. All rights reserved.</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- JS -->
-  <script src="js/script.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to book? Reach out directly.</p>
+    <a href="tel:+918859953651" class="contact-btn">📞 Call Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Elvara Stays. All rights reserved.</p>
+</footer>
 
 </body>
+</html>
 
 </html>
