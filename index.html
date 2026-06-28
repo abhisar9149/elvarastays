@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birchwood Residences — Modern apartments in Dehradun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-contours" id="hero-contours"></div>
+      <div class="wrap">
+        <p class="hero-eyebrow">Dehradun, Uttarakhand</p>
+        <h1 id="hero-title">Two modern apartments,<br>fully yours for the stay</h1>
+        <p class="lede" id="hero-note">Serviced apartments in Dehradun.</p>
+        <a href="#properties" class="btn btn-primary">See our apartments</a>
+      </div>
+    </section>
+
+    <section id="properties">
+      <div class="wrap">
+        <p class="section-eyebrow">Our properties</p>
+        <h2>Pick your apartment</h2>
+        <p>Two buildings in Dehradun, five minutes apart by car, each suited to a different kind of stay.</p>
+
+        <div class="property-grid" id="property-grid">
+          <p class="loading-note">Loading properties…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/shared.js"></script>
+  <script>
+    (async function init() {
+      const site = await renderChrome("home");
+      if (site) {
+        document.getElementById("hero-note").textContent = site.heroNote || "";
+      }
+
+      document.getElementById("hero-contours").innerHTML = contourSVG({ lines: 6, opacity: 0.5 });
+
+      const properties = await loadJSON(DATA_PATH.properties);
+      const grid = document.getElementById("property-grid");
+
+      if (!properties || properties.length === 0) {
+        grid.innerHTML = `<p class="empty-note">No properties yet. Add one in data/properties.json.</p>`;
+        return;
+      }
+
+      grid.innerHTML = properties.map(p => `
+        <article class="property-card">
+          <a href="property.html?id=${encodeURIComponent(p.id)}" class="property-card-image">
+            <img src="${escapeHTML(p.heroImage)}" alt="${escapeHTML(p.name)}" loading="lazy">
+          </a>
+          <div class="property-card-body">
+            <p class="property-card-tagline">${escapeHTML(p.tagline || "")}</p>
+            <h3>${escapeHTML(p.name)}</h3>
+            <p>${escapeHTML(p.shortDescription || "")}</p>
+            <a href="property.html?id=${encodeURIComponent(p.id)}" class="btn btn-outline">View property</a>
+          </div>
+        </article>
+      `).join("");
+    })();
+  </script>
+</body>
+</html>

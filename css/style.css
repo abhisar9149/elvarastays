@@ -1,0 +1,523 @@
+/* ===================================================================
+   BIRCHWOOD RESIDENCES — design tokens
+   Theme: modern apartments, architectural/blueprint motif.
+   Edit the variables below to retheme the whole site from one
+   place — nothing else needs to change.
+   =================================================================== */
+
+:root {
+  /* Color */
+  --color-bg: #FAFAF8;
+  --color-bg-soft: #F1EFEA;
+  --color-bg-card: #FFFFFF;
+  --color-accent: #2F4DA0;
+  --color-on-accent: #FFFFFF;
+  --color-accent-soft: #2F4DA01F;
+  --color-text: #1A1B1E;
+  --color-text-dim: #6B6D72;
+  --color-steel: #7B8499;
+  --color-line: #E1DFDA;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Layout */
+  --max-width: 1140px;
+  --radius: 3px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--space-sm) 0;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 var(--space-sm) 0; color: var(--color-text-dim); }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Visible keyboard focus, everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.brand span { color: var(--color-accent); }
+
+.main-nav {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.95rem;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 0.25rem 0;
+  color: var(--color-text-dim);
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover, .main-nav a.active { color: var(--color-text); }
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 720px) {
+  .main-nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--color-bg);
+    flex-direction: column;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-line);
+    display: none;
+  }
+  .main-nav.open { display: flex; }
+  .nav-toggle { display: inline-block; }
+}
+
+/* ---------- Blueprint divider / texture (signature motif) ---------- */
+
+.contour-divider {
+  width: 100%;
+  height: 48px;
+  display: block;
+  opacity: 0.5;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: var(--space-xl) 0 var(--space-lg);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
+}
+
+.hero-contours {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.hero .wrap { position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-steel);
+  margin-bottom: var(--space-sm);
+}
+
+.hero p.lede {
+  max-width: 38ch;
+  font-size: 1.1rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-line);
+  color: var(--color-text);
+}
+
+.btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* ---------- Property cards (home page) ---------- */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+@media (max-width: 720px) {
+  .property-grid { grid-template-columns: 1fr; }
+}
+
+.property-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.property-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -12px rgba(20, 24, 40, 0.18);
+}
+
+.property-card-image { aspect-ratio: 3/2; overflow: hidden; }
+.property-card-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.property-card-body { padding: var(--space-md); flex: 1; display: flex; flex-direction: column; }
+
+.property-card-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.property-card-body .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---------- Section spacing ---------- */
+
+section { padding: var(--space-lg) 0; }
+section.tight { padding: var(--space-md) 0; }
+
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-steel);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--space-xs);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery img { width: 100%; height: 100%; object-fit: cover; }
+.gallery a:first-child { grid-row: span 2; }
+
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); }
+  .gallery a:first-child { grid-row: span 1; grid-column: span 2; }
+}
+
+/* ---------- Amenities list ---------- */
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+}
+
+@media (max-width: 600px) { .amenities-list { grid-template-columns: 1fr; } }
+
+.amenities-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  color: var(--color-text);
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--color-line);
+}
+
+.amenities-list li::before {
+  content: "+";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Pricing cards ---------- */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-sm);
+}
+
+.room-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.room-card .price {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--color-accent);
+  margin: 0.4rem 0;
+}
+
+.room-card .occupancy {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-steel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Location ---------- */
+
+.location-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+@media (max-width: 720px) { .location-block { grid-template-columns: 1fr; } }
+
+.map-frame {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.map-frame iframe { width: 100%; height: 100%; border: 0; }
+
+/* ---------- Reviews ---------- */
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.review-card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.review-stamp {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 40px; height: 40px;
+  border: 1.5px solid var(--color-accent-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+}
+
+.review-text { font-style: normal; color: var(--color-text); margin-bottom: var(--space-sm); }
+
+.review-guest { font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-steel); }
+
+/* ---------- About page ---------- */
+
+.about-body p { font-size: 1.05rem; max-width: 62ch; }
+
+/* ---------- Contact ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-info dt {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-steel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: var(--space-sm);
+}
+
+.contact-info dd { margin: 0.2rem 0 0 0; font-size: 1.05rem; }
+
+form.contact-form { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.contact-form label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-steel);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+  width: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  padding: 0.65rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  border-color: var(--color-accent);
+}
+
+.form-status {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-steel);
+  min-height: 1.2em;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--color-line);
+  padding: var(--space-lg) 0 var(--space-md);
+  color: var(--color-text-dim);
+  background: var(--color-bg-soft);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: var(--space-md); } }
+
+.footer-grid h3 { font-size: 1rem; color: var(--color-text); }
+
+.footer-grid a { display: block; padding: 0.2rem 0; color: var(--color-text-dim); }
+.footer-grid a:hover { color: var(--color-accent); }
+
+.footer-bottom {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-line);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-steel);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ---------- Loading / empty states ---------- */
+
+.loading-note, .empty-note {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-steel);
+  padding: var(--space-md) 0;
+}
+
+/* ---------- Utility ---------- */
+
+.center { text-align: center; }
+.mt-lg { margin-top: var(--space-lg); }
