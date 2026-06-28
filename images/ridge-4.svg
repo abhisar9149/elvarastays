@@ -1,0 +1,11 @@
+<svg viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="533" fill="#3A4F66"/>
+  <path d="M -20 50 Q 10 65 40 50 Q 70 66 100 50 Q 130 46 160 50 Q 190 38 220 50 Q 250 49 280 50 Q 310 64 340 50 Q 370 59 400 50 Q 430 54 460 50 Q 490 55 520 50 Q 550 52 580 50 Q 610 55 640 50 Q 670 39 700 50 Q 730 51 760 50 Q 790 43 820 50 " fill="none" stroke="#E6A445" stroke-opacity="0.1" stroke-width="1.5"/>
+<path d="M -20 100 Q 10 99 40 100 Q 70 108 100 100 Q 130 114 160 100 Q 190 91 220 100 Q 250 89 280 100 Q 310 114 340 100 Q 370 109 400 100 Q 430 92 460 100 Q 490 85 520 100 Q 550 115 580 100 Q 610 101 640 100 Q 670 84 700 100 Q 730 89 760 100 Q 790 114 820 100 " fill="none" stroke="#E6A445" stroke-opacity="0.14" stroke-width="1.5"/>
+<path d="M -20 183 Q 10 169 40 183 Q 70 198 100 183 Q 130 178 160 183 Q 190 194 220 183 Q 250 187 280 183 Q 310 179 340 183 Q 370 186 400 183 Q 430 178 460 183 Q 490 183 520 183 Q 550 183 580 183 Q 610 166 640 183 Q 670 173 700 183 Q 730 191 760 183 Q 790 167 820 183 " fill="none" stroke="#E6A445" stroke-opacity="0.18" stroke-width="1.5"/>
+<path d="M -20 255 Q 10 247 40 255 Q 70 257 100 255 Q 130 260 160 255 Q 190 237 220 255 Q 250 240 280 255 Q 310 256 340 255 Q 370 247 400 255 Q 430 246 460 255 Q 490 260 520 255 Q 550 259 580 255 Q 610 271 640 255 Q 670 250 700 255 Q 730 269 760 255 Q 790 259 820 255 " fill="none" stroke="#E6A445" stroke-opacity="0.22" stroke-width="1.5"/>
+<path d="M -20 318 Q 10 336 40 318 Q 70 303 100 318 Q 130 307 160 318 Q 190 324 220 318 Q 250 301 280 318 Q 310 324 340 318 Q 370 315 400 318 Q 430 301 460 318 Q 490 302 520 318 Q 550 301 580 318 Q 610 324 640 318 Q 670 335 700 318 Q 730 326 760 318 Q 790 310 820 318 " fill="none" stroke="#E6A445" stroke-opacity="0.26" stroke-width="1.5"/>
+  <circle cx="660" cy="120" r="3" fill="#E6A445" fill-opacity="0.6"/>
+  <text x="400" y="255" font-family="Georgia, serif" font-size="22" fill="#F6F1E7" fill-opacity="0.55" text-anchor="middle">Ridge House</text>
+  <text x="400" y="285" font-family="Georgia, serif" font-size="13" fill="#F6F1E7" fill-opacity="0.35" text-anchor="middle" letter-spacing="2">PHOTO PLACEHOLDER 4</text>
+</svg>

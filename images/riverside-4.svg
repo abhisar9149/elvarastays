@@ -1,0 +1,11 @@
+<svg viewBox="0 0 800 533" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="533" fill="#3A4F66"/>
+  <path d="M -20 49 Q 10 62 40 49 Q 70 39 100 49 Q 130 63 160 49 Q 190 65 220 49 Q 250 53 280 49 Q 310 53 340 49 Q 370 55 400 49 Q 430 64 460 49 Q 490 51 520 49 Q 550 59 580 49 Q 610 39 640 49 Q 670 55 700 49 Q 730 59 760 49 Q 790 67 820 49 " fill="none" stroke="#E6A445" stroke-opacity="0.1" stroke-width="1.5"/>
+<path d="M -20 116 Q 10 134 40 116 Q 70 115 100 116 Q 130 113 160 116 Q 190 119 220 116 Q 250 114 280 116 Q 310 131 340 116 Q 370 127 400 116 Q 430 115 460 116 Q 490 106 520 116 Q 550 103 580 116 Q 610 133 640 116 Q 670 104 700 116 Q 730 119 760 116 Q 790 125 820 116 " fill="none" stroke="#E6A445" stroke-opacity="0.14" stroke-width="1.5"/>
+<path d="M -20 190 Q 10 177 40 190 Q 70 186 100 190 Q 130 208 160 190 Q 190 192 220 190 Q 250 181 280 190 Q 310 184 340 190 Q 370 203 400 190 Q 430 188 460 190 Q 490 201 520 190 Q 550 177 580 190 Q 610 206 640 190 Q 670 174 700 190 Q 730 200 760 190 Q 790 192 820 190 " fill="none" stroke="#E6A445" stroke-opacity="0.18" stroke-width="1.5"/>
+<path d="M -20 241 Q 10 239 40 241 Q 70 245 100 241 Q 130 243 160 241 Q 190 224 220 241 Q 250 233 280 241 Q 310 258 340 241 Q 370 249 400 241 Q 430 247 460 241 Q 490 248 520 241 Q 550 240 580 241 Q 610 249 640 241 Q 670 252 700 241 Q 730 223 760 241 Q 790 233 820 241 " fill="none" stroke="#E6A445" stroke-opacity="0.22" stroke-width="1.5"/>
+<path d="M -20 324 Q 10 340 40 324 Q 70 336 100 324 Q 130 310 160 324 Q 190 332 220 324 Q 250 313 280 324 Q 310 332 340 324 Q 370 333 400 324 Q 430 332 460 324 Q 490 313 520 324 Q 550 308 580 324 Q 610 319 640 324 Q 670 331 700 324 Q 730 327 760 324 Q 790 334 820 324 " fill="none" stroke="#E6A445" stroke-opacity="0.26" stroke-width="1.5"/>
+  <circle cx="660" cy="120" r="3" fill="#E6A445" fill-opacity="0.6"/>
+  <text x="400" y="255" font-family="Georgia, serif" font-size="22" fill="#F6F1E7" fill-opacity="0.55" text-anchor="middle">Riverside Cottage</text>
+  <text x="400" y="285" font-family="Georgia, serif" font-size="13" fill="#F6F1E7" fill-opacity="0.35" text-anchor="middle" letter-spacing="2">PHOTO PLACEHOLDER 4</text>
+</svg>
