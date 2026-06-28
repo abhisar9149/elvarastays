@@ -3,106 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elvara Stays | Homestay</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- ADDED: Schema Markup for Google Bot Verification -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BedAndBreakfast",
-    "name": "Elvara Stays",
-    "telephone": "+91-88599-53651",
-    "url": "https://elvarastays.com"
-  }
-  </script>
+  <title>Birchwood Homestays — Two homes in the hills above Dehradun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-container">
-    <div class="header-left">
-      <img src="logo.png" class="logo" alt="Elvara Stays logo">
-      <h1 class="logo-text">Elvara Stays</h1>
-    </div>
+  <header class="site-header" id="site-header"></header>
 
-    <nav class="header-nav">
-      <a href="#home">Home</a>
-      <a href="#properties">Properties</a>
-      <a href="#contact">Contact</a>
-      <a href="tel:+918859953651" class="call-btn">📞 Call: +918859953651</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/01a928a3-e656-45ab-b618-2db945c0ca6a.jpeg?im_w=1200" class="hero-img">
-
-  <div class="hero-text">
-    <h2>Quiet. Comfortable. Memorable stays.</h2>
-    <p>Experience premium homestays in nature.</p>
-  </div>
-</section>
-
-<!-- PROPERTIES -->
-<section id="properties" class="properties">
-  <div class="container">
-    <h2>Our Properties</h2>
-
-    <div class="properties-grid">
-
-      <div class="property-card" data-id="pearl">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1535503430412140433/original/ea883d0b-60bd-433a-9faf-4dbf57f3d005.jpeg?im_w=720">
-        <h3>The Pearl</h3>
-        <p>A peaceful, premium stay surrounded by nature.</p>
-        <button class="book-btn">View Details</button>
+  <main>
+    <section class="hero">
+      <div class="hero-contours" id="hero-contours"></div>
+      <div class="wrap">
+        <p class="hero-eyebrow">Dehradun, Uttarakhand</p>
+        <h1 id="hero-title">Two homes in the hills,<br>one warm welcome</h1>
+        <p class="lede" id="hero-note">Family-run stays above Dehradun.</p>
+        <a href="#properties" class="btn btn-primary">See our properties</a>
       </div>
+    </section>
 
-      <div class="property-card" data-id="cove">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1403594766964800043/original/43abbade-cfe5-452c-8cc7-24d7ec4819ce.jpeg?im_w=1200">
-        <h3>The Cove</h3>
-        <p>A cozy getaway designed for relaxation.</p>
-        <button class="book-btn">View Details</button>
+    <section id="properties">
+      <div class="wrap">
+        <p class="section-eyebrow">Our properties</p>
+        <h2>Pick your hillside</h2>
+        <p>Two stays on the same ridge, five minutes apart on foot, each with its own character.</p>
+
+        <div class="property-grid" id="property-grid">
+          <p class="loading-note">Loading properties…</p>
+        </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </div>
-</section>
+  <footer class="site-footer" id="site-footer"></footer>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to book? Reach out directly.</p>
-    <a href="tel:+918859953651" class="contact-btn">📞 Call Now: +91 8859953651</a>
-  </div>
-</section>
+  <script src="js/shared.js"></script>
+  <script>
+    (async function init() {
+      const site = await renderChrome("home");
+      if (site) {
+        document.getElementById("hero-note").textContent = site.heroNote || "";
+      }
 
-  <!-- ADDRESS -->
-<section id="address" class="address">
-  <div class="container">
-    <h2>Our Location</h2>
-    <p>
-      3-Doon Divine Residential Welfare Society,<br>
-      IT-Park Road,<br>
-      Landmark: IT-Park back gate,<br>
-      Dehradun-248013,<br>
-      India
-    </p>
-  </div>
-</section>
+      document.getElementById("hero-contours").innerHTML = contourSVG({ lines: 6, opacity: 0.5 });
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Elvara Stays. All rights reserved.</p>
-  <!-- ADDED: Plain text phone number for manual verification -->
-  <p><strong>Contact: +91 88599 53651</strong></p>
-</footer>
+      const properties = await loadJSON(DATA_PATH.properties);
+      const grid = document.getElementById("property-grid");
 
+      if (!properties || properties.length === 0) {
+        grid.innerHTML = `<p class="empty-note">No properties yet. Add one in data/properties.json.</p>`;
+        return;
+      }
+
+      grid.innerHTML = properties.map(p => `
+        <article class="property-card">
+          <a href="property.html?id=${encodeURIComponent(p.id)}" class="property-card-image">
+            <img src="${escapeHTML(p.heroImage)}" alt="${escapeHTML(p.name)}" loading="lazy">
+          </a>
+          <div class="property-card-body">
+            <p class="property-card-tagline">${escapeHTML(p.tagline || "")}</p>
+            <h3>${escapeHTML(p.name)}</h3>
+            <p>${escapeHTML(p.shortDescription || "")}</p>
+            <a href="property.html?id=${encodeURIComponent(p.id)}" class="btn btn-outline">View property</a>
+          </div>
+        </article>
+      `).join("");
+    })();
+  </script>
 </body>
 </html>
