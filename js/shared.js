@@ -57,7 +57,7 @@ async function renderChrome(activePage) {
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
         <nav class="main-nav" id="main-nav">
           <a href="index.html" data-page="home">Home</a>
-          <a href="property.html?id=aspen-residence" data-page="property">Properties</a>
+          <a href="property.html?id=the-pearl" data-page="property">Properties</a>
           <a href="about.html" data-page="about">About</a>
           <a href="contact.html" data-page="contact">Contact</a>
         </nav>
