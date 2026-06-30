@@ -1,19 +1,20 @@
 [
   {
-    "id": "aspen-residence",
-    "name": "Aspen Residence",
+    "id": "THe Pearl",
+    "name": "The Pearl",
     "tagline": "Central, fast Wi-Fi, built for work trips",
     "shortDescription": "A modern apartment building in the centre of Dehradun, five minutes from Rajpur Road, set up for business travellers and short stays.",
     "description": [
       "Aspen Residence is our city-centre building — closest to restaurants, the railway station, and the main business district. Each apartment has a dedicated work desk, blackout curtains, and a kitchenette stocked with the basics.",
       "Most guests here are on work trips of a few days to a couple of weeks. Housekeeping is available on request rather than scheduled, so you're not interrupted mid-call."
     ],
-    "heroImage": "images/aspen-1.svg",
+    "heroImage": "images/pearl-1.webp",
     "images": [
-      "images/aspen-1.svg",
-      "images/aspen-2.svg",
-      "images/aspen-3.svg",
-      "images/aspen-4.svg"
+      "images/pearl-1.webp",
+      "images/pearl-2.webp",
+      "images/pearl-3.webp",
+      "images/pearl-4.webp",
+      "images/pearl-5.webp"
     ],
     "amenities": [
       "High-speed Wi-Fi (fibre)",
