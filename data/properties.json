@@ -1,7 +1,7 @@
 [
   {
-    "id": "aspen residence",
-    "name": "aspen residence",
+    "id": "the-pearl",
+    "name": "The Pearl",
     "tagline": "Central, fast Wi-Fi, built for work trips",
     "shortDescription": "A modern apartment building in the centre of Dehradun, five minutes from Rajpur Road, set up for business travellers and short stays.",
     "description": [
@@ -64,8 +64,8 @@
     ]
   },
   {
-    "id": "cedar-residence",
-    "name": "Cedar Residence",
+    "id": "the-cove",
+    "name": "The Cove",
     "tagline": "More space, quieter street, built for families",
     "shortDescription": "A quieter apartment building five minutes from Aspen Residence, with larger layouts suited to families and longer stays.",
     "description": [
